@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="parentContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+           prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.172-ea"
+           xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.RegisterController">
+    <children>
+        <AnchorPane fx:id="anchorRoot" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #ffffff;">
+            <children>
+                <HBox prefHeight="600.0" prefWidth="939.0">
+                    <children>
+                        <VBox alignment="CENTER" prefHeight="600.0" prefWidth="469.0"
+                              style="-fx-background-color: #98c665;">
+                            <children>
+                                <ImageView fitHeight="131.0" fitWidth="134.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@resource/logo6.png"/>
+                                    </image>
+                                </ImageView>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="GoGreen" textAlignment="CENTER"
+                                      wrappingWidth="300.48193359375">
+                                    <font>
+                                        <Font name="Gill Sans" size="25.0"/>
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets top="10.0"/>
+                                    </VBox.margin>
+                                </Text>
+                            </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="599.0" prefWidth="470.0">
+                            <children>
+                                <HBox alignment="TOP_RIGHT" prefHeight="63.0" prefWidth="470.0">
+                                    <children>
+                                        <Button fx:id="backButton" mnemonicParsing="false" onAction="#loadLoginScreen"
+                                                style="-fx-background-color: transparent;">
+                                            <graphic>
+                                                <ImageView fitHeight="33.0" fitWidth="77.0" pickOnBounds="true"
+                                                           preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@resource/back_button.png"/>
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="37.0" prefWidth="470.0">
+                                    <children>
+                                        <Text fill="#98c665" strokeType="OUTSIDE" strokeWidth="0.0" text="Register">
+                                            <font>
+                                                <Font name="Gill Sans Light" size="30.0"/>
+                                            </font>
+                                        </Text>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="86.0" prefWidth="470.0">
+                                    <children>
+                                        <TextField fx:id="nameRegister" prefHeight="51.0" prefWidth="280.0"
+                                                   promptText="name"
+                                                   style="-fx-background-color: transparent; -fx-border-width: 0 0 2px 0; -fx-border-color: #98c665;">
+                                            <opaqueInsets>
+                                                <Insets top="20.0"/>
+                                            </opaqueInsets>
+                                            <font>
+                                                <Font name="Gill Sans Light" size="16.0"/>
+                                            </font>
+                                        </TextField>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="68.0" prefWidth="450.0">
+                                    <children>
+                                        <TextField fx:id="usernameRegister" prefHeight="51.0" prefWidth="280.0"
+                                                   promptText="username"
+                                                   style="-fx-background-color: transparent; -fx-border-color: #98c665; -fx-border-width: 0 0 2px 0;">
+                                            <font>
+                                                <Font name="Gill Sans Light" size="16.0"/>
+                                            </font>
+                                        </TextField>
+                                    </children>
+                                </HBox>
+                                <Label fx:id="errorUsername" prefHeight="28.0" prefWidth="276.0"
+                                       text="This username is already used, try with a new username" textFill="RED"
+                                       visible="false">
+                                    <font>
+                                        <Font name="Gill Sans Light Italic" size="13.0"/>
+                                    </font>
+                                </Label>
+                                <HBox alignment="CENTER" prefHeight="66.0" prefWidth="470.0">
+                                    <children>
+                                        <PasswordField fx:id="passwordRegister" prefHeight="51.0" prefWidth="280.0"
+                                                       promptText="password"
+                                                       style="-fx-background-color: transparent; -fx-border-color: #98c665; -fx-border-width: 0 0 2px 0;">
+                                            <font>
+                                                <Font name="Gill Sans Light" size="16.0"/>
+                                            </font>
+                                        </PasswordField>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="111.0" prefWidth="470.0">
+                                    <children>
+                                        <PasswordField fx:id="confirmPasswordRegister" prefHeight="51.0"
+                                                       prefWidth="280.0" promptText="confirm password"
+                                                       style="-fx-background-color: transparent; -fx-border-color: #98c665; -fx-border-width: 0 0 2px 0;">
+                                            <opaqueInsets>
+                                                <Insets top="10.0"/>
+                                            </opaqueInsets>
+                                            <font>
+                                                <Font name="Gill Sans Light" size="16.0"/>
+                                            </font>
+                                        </PasswordField>
+                                    </children>
+                                </HBox>
+                                <Label fx:id="errorPassword" prefHeight="22.0" prefWidth="144.0"
+                                       text="Wrong password, try again" textAlignment="CENTER" textFill="RED"
+                                       visible="false">
+                                    <font>
+                                        <Font name="Gill Sans Light" size="13.0"/>
+                                    </font>
+                                </Label>
+                                <HBox alignment="CENTER" prefHeight="107.0" prefWidth="470.0">
+                                    <children>
+                                        <Button fx:id="registerButtonRegister" mnemonicParsing="false"
+                                                onAction="#register" prefHeight="43.0" prefWidth="96.0"
+                                                stylesheets="@../../resources/buttons.css" text="Register"
+                                                textFill="#98c665" translateY="-10.0">
+                                            <font>
+                                                <Font name="Gill Sans Light" size="13.0"/>
+                                            </font>
+                                        </Button>
+                                    </children>
+                                </HBox>
+
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+
+        </AnchorPane>
+
+    </children>
+
+</StackPane>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="parentContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+           prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.1"
+           xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ModifyCarController">
+    <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1"
+                xmlns:fx="http://javafx.com/fxml/1">
+        <VBox alignment="CENTER" prefHeight="600.0" prefWidth="169.0" style="-fx-background-color: #98c665;">
+            <children>
+                <ImageView fitHeight="126.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@resource/logo6.png"/>
+                    </image>
+                </ImageView>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="GoGreen">
+                    <VBox.margin>
+                        <Insets top="5.0"/>
+                    </VBox.margin>
+                    <font>
+                        <Font name="Gill Sans Light" size="20.0"/>
+                    </font>
+                </Text>
+            </children>
+        </VBox>
+        <VBox alignment="CENTER" layoutX="-1.0" prefHeight="600.0" prefWidth="732.0"
+              style="-fx-background-color: #ffffff;" translateX="170.0">
+            <children>
+
+                <ImageView fitHeight="65.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true" translateX="-40.0"
+                           translateY="210.0">
+                    <image>
+                        <Image url="@resource/OR.jpg"/>
+                    </image>
+                </ImageView>
+            </children>
+        </VBox>
+
+        <Button fx:id="backButton" layoutX="546.0" layoutY="-6.0" mnemonicParsing="false" onAction="#loadSettingsScreen"
+                prefHeight="56.0" prefWidth="54.0" style="-fx-background-color: transparent;" translateX="295.0"
+                translateY="2.0">
+            <graphic>
+                <ImageView fitHeight="49.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@resource/back_button.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <ImageView fitHeight="121.0" fitWidth="357.0" layoutX="191.0" layoutY="14.0" pickOnBounds="true"
+                   preserveRatio="true" translateX="140.0">
+            <image>
+                <Image url="@resource/Add_ChangeCar.jpg"/>
+            </image>
+        </ImageView>
+        <TextField fx:id="model" alignment="CENTER" layoutX="365.0" layoutY="240.0" prefHeight="65.0" prefWidth="272.0"
+                   promptText="Enter Model..."
+                   style="-fx-background-color: transparent; -fx-border-color: #98c665; -fx-border-width: 0 0 2px 0;"/>
+        <TextField fx:id="brand" alignment="CENTER" layoutX="244.0" layoutY="125.0" prefHeight="65.0" prefWidth="272.0"
+                   promptText="Enter brand..."
+                   style="-fx-background-color: transparent; -fx-border-color: #98c665; -fx-border-width: 0 0 2px 0;"
+                   translateX="120.0" translateY="15.0"/>
+        <TextField fx:id="buildyear" alignment="CENTER" layoutX="365.0" layoutY="355.0" prefHeight="65.0"
+                   prefWidth="272.0" promptText="Enter Year..."
+                   style="-fx-background-color: transparent; -fx-border-color: #98c665; -fx-border-width: 0 0 2px 0;"/>
+        <Button fx:id="addCar" layoutX="202.0" layoutY="329.0" mnemonicParsing="false" onAction="#addCar"
+                prefHeight="56.0" prefWidth="139.0" stylesheets="@../../resources/buttons.css" text="Add"
+                textFill="#98c665" translateX="50.0" translateY="150.0">
+            <Font name="Gill Sans" size="16.0"/>
+        </Button>
+        <Button fx:id="updateCar" layoutX="376.0" layoutY="329.0" mnemonicParsing="false" onAction="#updateCar"
+                prefHeight="56.0" prefWidth="139.0" stylesheets="@../../resources/buttons.css" text="Change"
+                textFill="#98c665" translateX="200.0" translateY="150.0">
+            <Font name="Gill Sans" size="16.0"/>
+
+        </Button>
+
+        <children>
+        </children>
+
+    </AnchorPane>
+</StackPane>

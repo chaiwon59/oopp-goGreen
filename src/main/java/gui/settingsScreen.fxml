@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<StackPane fx:id="parentContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+           prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.172-ea"
+           xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.SettingsScreenController">
+    <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+        <VBox alignment="CENTER" prefHeight="600.0" prefWidth="169.0" style="-fx-background-color: #98c665;">
+            <children>
+                <ImageView fitHeight="126.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@resource/logo6.png"/>
+                    </image>
+                </ImageView>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="GoGreen">
+                    <VBox.margin>
+                        <Insets top="5.0"/>
+                    </VBox.margin>
+                    <font>
+                        <Font name="Gill Sans Light" size="20.0"/>
+                    </font>
+                </Text>
+            </children>
+        </VBox>
+        <VBox alignment="CENTER" layoutX="-1.0" prefHeight="600.0" prefWidth="732.0"
+              style="-fx-background-color: #ffffff;" translateX="170.0">
+            <children>
+
+                <ImageView fitHeight="65.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true" translateX="-30.0"
+                           translateY="110.0">
+                    <image>
+                        <Image url="@resource/OR.jpg"/>
+                    </image>
+                </ImageView>
+            </children>
+        </VBox>
+        <Button fx:id="changePasswordButton" layoutX="-14.0" layoutY="-22.0" mnemonicParsing="false"
+                onAction="#loadChangePasswordScreen" style="-fx-background-color: transparent;" translateX="295.0"
+                translateY="210.0">
+            <graphic>
+                <ImageView fitHeight="154.0" fitWidth="418.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@resource/changePassword_button.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+
+        <Button fx:id="deleteAccountButton" layoutX="-12.0" layoutY="-34.0" mnemonicParsing="false"
+                onAction="#loadbacktoLogIn" prefHeight="44.0" prefWidth="236.0"
+                style="-fx-background-color: transparent;" translateX="320.0" translateY="115.0">
+            <graphic>
+                <ImageView fitHeight="100.0" fitWidth="368.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@resource/deleteAccount_button.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="addCarButton" layoutX="-1.0" layoutY="-48.0" mnemonicParsing="false"
+                onAction="#loadCarModifyingScreen" prefHeight="58.0" prefWidth="158.0"
+                style="-fx-background-color: transparent;" translateX="395.0" translateY="330.0">
+            <graphic>
+                <ImageView fitHeight="80.0" fitWidth="214.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@resource/AddCar.jpg"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="changeCarButton" layoutX="3.0" layoutY="-82.0" mnemonicParsing="false"
+                onAction="#loadCarModifyingScreen2" prefHeight="43.0" prefWidth="208.0"
+                style="-fx-background-color: transparent;" translateX="350.0" translateY="530.0">
+            <graphic>
+                <ImageView fitHeight="112.0" fitWidth="301.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@resource/ChangeCar.jpg"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="profileBackButton" mnemonicParsing="false" onAction="#loadPreviousScreen" prefHeight="56.0"
+                prefWidth="54.0" style="-fx-background-color: transparent;" translateX="850.0">
+            <graphic>
+                <ImageView fitHeight="42.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@resource/back_button.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+
+
+    </AnchorPane>
+</StackPane>

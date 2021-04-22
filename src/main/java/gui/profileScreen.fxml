@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="parentContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ProfileController">
+    <children>
+        <AnchorPane fx:id="anchorRoot" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: #ffffff;">
+            <children>
+                <HBox prefHeight="600.0" prefWidth="900.0">
+                    <children>
+                        <VBox alignment="CENTER" prefHeight="600.0" prefWidth="173.0" style="-fx-background-color: #98c665;">
+                            <children>
+                                <ImageView fitHeight="126.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@resource/logo6.png" />
+                                    </image>
+                                </ImageView>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="GoGreen">
+                                    <VBox.margin>
+                                        <Insets top="5.0" />
+                                    </VBox.margin>
+                                    <font>
+                                        <Font name="Gill Sans Light" size="20.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </VBox>
+                        <VBox prefHeight="600.0" prefWidth="725.0">
+                            <children>
+                                <HBox alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="505.0">
+                                    <children>
+                                        <HBox prefHeight="43.0" prefWidth="306.0">
+                                        </HBox>
+                                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                                            <children>
+                                                <Button fx:id="profileBackButton" mnemonicParsing="false" onAction="#loadWelcomeScreen" prefHeight="56.0" prefWidth="54.0" style="-fx-background-color: transparent;">
+                                                    <graphic>
+                                                        <ImageView fitHeight="42.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@resource/back_button.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                    </graphic>
+                                                </Button>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="77.0" prefWidth="725.0">
+                                    <children>
+                                        <ImageView fitHeight="51.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@resource/profile.png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="79.0" prefWidth="725.0" translateY="20.0">
+                                    <children>
+                                        <ImageView fitHeight="36.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@resource/name.png" />
+                                            </image>
+                                        </ImageView>
+                                        <Label fx:id="nameLabel" alignment="CENTER" prefHeight="34.0" prefWidth="174.0">
+                                            <font>
+                                                <Font name="Gill Sans Light" size="36.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="165.0" prefWidth="725.0">
+                                    <children>
+                                        <ImageView fitHeight="40.0" fitWidth="202.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@resource/username.png" />
+                                            </image>
+                                        </ImageView>
+                                        <Label fx:id="usernameLabel" alignment="CENTER" prefHeight="44.0" prefWidth="256.0">
+                                            <font>
+                                                <Font name="Gill Sans" size="36.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="204.0" prefWidth="725.0">
+                                    <children>
+                                        <Button fx:id="settingsScreenButton" mnemonicParsing="false" onAction="#loadSettingsScreen" prefHeight="47.0" prefWidth="165.0" style="-fx-background-color: transparent;" translateY="-50.0">
+                                            <graphic>
+                                                <ImageView fitHeight="101.0" fitWidth="270.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@resource/settings.jpg" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                    </children>
+                                </HBox>
+
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

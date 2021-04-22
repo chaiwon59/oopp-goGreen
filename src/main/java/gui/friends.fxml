@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="parentContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+           prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.172-ea"
+           xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.FriendsController">
+    <children>
+        <AnchorPane fx:id="anchorRoot" prefHeight="300.0" prefWidth="300.0">
+            <children>
+                <HBox prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #ffffff;">
+                    <children>
+                        <VBox alignment="CENTER" prefHeight="600.0" prefWidth="251.0"
+                              style="-fx-background-color: #98c665;">
+                            <children>
+                                <VBox alignment="TOP_CENTER" prefHeight="195.0" prefWidth="94.0">
+                                    <children>
+                                        <Button fx:id="userButtonMain" mnemonicParsing="false"
+                                                onAction="#loadProfileScreen" prefHeight="36.0" prefWidth="141.0"
+                                                style="-fx-background-color: #98c665;" text="USER">
+
+                                            <graphic>
+                                                <ImageView fitHeight="37.0" fitWidth="38.0" pickOnBounds="true"
+                                                           preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@resource/user.png"/>
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                            <font>
+                                                <Font name="Gill Sans Light" size="16.0"/>
+                                            </font>
+                                        </Button>
+                                        <HBox alignment="CENTER" prefHeight="63.0" prefWidth="94.0">
+                                            <children>
+                                                <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#logout"
+                                                        prefHeight="45.0" prefWidth="136.0"
+                                                        style="-fx-background-color: transparent;" text="LOGOUT">
+                                                    <graphic>
+                                                        <ImageView fitHeight="33.0" fitWidth="46.0" pickOnBounds="true"
+                                                                   preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@resource/logout_symbol.png"/>
+                                                            </image>
+                                                        </ImageView>
+                                                    </graphic>
+                                                    <font>
+                                                        <Font name="Gill Sans Light" size="16.0"/>
+                                                    </font>
+                                                </Button>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                                <VBox alignment="CENTER" prefHeight="141.0" prefWidth="94.0">
+                                    <children>
+                                        <ImageView fitHeight="126.0" fitWidth="111.0" pickOnBounds="true"
+                                                   preserveRatio="true">
+                                            <image>
+                                                <Image url="@resource/logo6.png"/>
+                                            </image>
+                                        </ImageView>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="GoGreen">
+                                            <font>
+                                                <Font name="Gill Sans" size="20.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets top="5.0"/>
+                                            </VBox.margin>
+                                        </Text>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </VBox>
+                        <VBox prefHeight="600.0" prefWidth="806.0">
+                            <children>
+                                <HBox alignment="TOP_RIGHT" prefHeight="70.0" prefWidth="728.0">
+                                    <children>
+                                        <HBox alignment="CENTER" prefHeight="55.0" prefWidth="607.0">
+                                            <children>
+                                                <ImageView fitHeight="36.0" fitWidth="153.0" pickOnBounds="true"
+                                                           preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@resource/friends.png"/>
+                                                    </image>
+                                                </ImageView>
+                                            </children>
+                                        </HBox>
+                                        <Button fx:id="backToWelcome" mnemonicParsing="false"
+                                                onAction="#loadWelcomeScreen" prefHeight="35.0" prefWidth="34.0"
+                                                style="-fx-background-color: transparent;">
+                                            <graphic>
+                                                <ImageView fitHeight="42.0" fitWidth="40.0" pickOnBounds="true"
+                                                           preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@resource/back_button.png"/>
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="379.0" prefWidth="728.0">
+                                    <children>
+                                        <TableView fx:id="friendTable" prefHeight="417.0" prefWidth="485.0"
+                                                   stylesheets="@/TableView.css">
+                                            <columns>
+                                                <TableColumn fx:id="usernameColumn" prefWidth="303.0" text="Username"/>
+                                                <TableColumn fx:id="scoreColumn" prefWidth="181.0" text="Score"/>
+                                            </columns>
+                                        </TableView>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="77.0" prefWidth="728.0">
+                                    <children>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="You are in "
+                                              wrappingWidth="115.86474609375">
+                                            <font>
+                                                <Font name="Gill Sans Light" size="24.0"/>
+                                            </font>
+                                        </Text>
+                                        <Label fx:id="rank" prefHeight="35.0" prefWidth="55.0">
+                                            <font>
+                                                <Font name="Gill Sans Light" size="24.0"/>
+                                            </font>
+                                        </Label>
+                                        <Label text="place">
+                                            <font>
+                                                <Font size="24.0"/>
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="70.0" prefWidth="728.0">
+                                    <children>
+                                        <Button fx:id="goToAddFriend" mnemonicParsing="false"
+                                                onAction="#loadGoToAddFriend" prefHeight="56.0" prefWidth="188.0"
+                                                stylesheets="@/buttons.css" text="ADD A NEW FRIEND" textFill="#98c665">
+                                            <font>
+                                                <Font name="Gill Sans Light" size="14.0"/>
+                                            </font>
+                                        </Button>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

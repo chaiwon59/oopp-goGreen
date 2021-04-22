@@ -1,0 +1,30 @@
+.chart-bar{
+    -fx-background-color: transparent;
+    -fx-font-family: "Gill Sans";
+}
+
+.axis{
+    -fx-font-family: "Gill Sans";
+}
+.data0.chart-bar{
+    -fx-background-color: #3c4f28;
+}
+.data1.chart-bar{
+    -fx-background-color: #6a8a46;
+}
+
+.data2.chart-bar{
+    -fx-background-color: #98c665;
+}
+
+.data3.chart-bar{
+    -fx-background-color: #b6d793;
+}
+
+.data4.chart-bar{
+    -fx-background-color: #d5e8c1;
+}
+
+.data5.chart-bar{
+    -fx-background-color: #eaf3e0;
+}

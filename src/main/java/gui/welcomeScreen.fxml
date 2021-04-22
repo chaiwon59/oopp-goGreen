@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml/1" fx:id="parentContainer" maxHeight="-Infinity" maxWidth="-Infinity"
+           minHeight="-Infinity"
+           minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0"
+           xmlns="http://javafx.com/javafx/8.0.172-ea" fx:controller="gui.WelcomeController">
+    <children>
+        <AnchorPane fx:id="anchorRoot" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #ffffff;">
+            <children>
+                <HBox layoutX="16.0" prefHeight="600.0" prefWidth="920.0">
+                    <children>
+                        <VBox alignment="CENTER" prefHeight="600.0" prefWidth="178.0"
+                              style="-fx-background-color: #98c665;">
+                            <children>
+                                <VBox alignment="TOP_CENTER" prefHeight="320.0" prefWidth="188.0">
+                                    <children>
+                                        <Button fx:id="userButtonMain" mnemonicParsing="false"
+                                                onAction="#loadProfileScreen" prefHeight="49.0" prefWidth="189.0"
+                                                style="-fx-background-color: #98c665;" text="USER">
+                                            <graphic>
+                                                <ImageView fitHeight="37.0" fitWidth="38.0" pickOnBounds="true"
+                                                           preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@resource/user.png"/>
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                            <font>
+                                                <Font name="Gill Sans Light" size="16.0"/>
+                                            </font>
+                                        </Button>
+                                        <HBox alignment="CENTER" prefHeight="63.0" prefWidth="94.0">
+                                            <children>
+                                                <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#logout"
+                                                        prefHeight="45.0" prefWidth="143.0"
+                                                        style="-fx-background-color: transparent;" text="LOGOUT">
+                                                    <graphic>
+                                                        <ImageView fitHeight="33.0" fitWidth="46.0" pickOnBounds="true"
+                                                                   preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@resource/logout_symbol.png"/>
+                                                            </image>
+                                                        </ImageView>
+                                                    </graphic>
+                                                    <font>
+                                                        <Font name="Gill Sans Light" size="16.0"/>
+                                                    </font>
+                                                </Button>
+                                            </children>
+                                        </HBox>
+                                        <VBox alignment="CENTER" prefHeight="206.0" prefWidth="188.0">
+                                            <children>
+                                                <ImageView fitHeight="126.0" fitWidth="111.0" pickOnBounds="true"
+                                                           preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@resource/logo6.png"/>
+                                                    </image>
+                                                </ImageView>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="GoGreen">
+                                                    <font>
+                                                        <Font name="Gill Sans" size="20.0"/>
+                                                    </font>
+                                                </Text>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </VBox>
+                        <VBox prefHeight="600.0" prefWidth="748.0">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="84.0" prefWidth="755.0">
+                                    <children>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome,">
+                                            <font>
+                                                <Font name="Gill Sans MT" size="42.0"/>
+                                            </font>
+                                        </Text>
+
+                                        <Label fx:id="welcomeUser" prefHeight="48.0" prefWidth="128.0" text="Label"
+                                               translateX="12.0">
+                                            <font>
+                                                <Font name="Gill Sans MT" size="42.0"/>
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="110.0" prefWidth="755.0">
+                                    <children>
+                                        <HBox alignment="CENTER" prefHeight="71.0" prefWidth="333.0">
+                                            <children>
+                                                <Button fx:id="showActivitiesScreenButton" mnemonicParsing="false"
+                                                        onAction="#showActivitiesScreen" prefHeight="55.0"
+                                                        prefWidth="190.0" stylesheets="@/buttons.css"
+                                                        text="Show Activities" textAlignment="CENTER">
+                                                    <font>
+                                                        <Font name="Gill Sans Light" size="20.0"/>
+                                                    </font>
+                                                </Button>
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER" prefHeight="71.0" prefWidth="243.0">
+                                            <children>
+                                                <Button fx:id="goToMainScreen" mnemonicParsing="false"
+                                                        onAction="#loadMainScreen" prefHeight="55.0" prefWidth="190.0"
+                                                        stylesheets="@/buttons.css" text="Add Activities"
+                                                        textAlignment="CENTER">
+                                                    <font>
+                                                        <Font name="Gill Sans Light" size="20.0"/>
+                                                    </font>
+                                                </Button>
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER" prefHeight="71.0" prefWidth="326.0">
+                                            <children>
+                                                <Button fx:id="goToFriends" mnemonicParsing="false"
+                                                        onAction="#loadGoToFriends" prefHeight="55.0" prefWidth="190.0"
+                                                        stylesheets="@/buttons.css" text="Friends"
+                                                        textAlignment="CENTER">
+                                                    <font>
+                                                        <Font name="Gill Sans Light" size="20.0"/>
+                                                    </font>
+                                                </Button>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="BOTTOM_CENTER" prefHeight="74.0" prefWidth="745.0">
+                                    <children>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="SCORE">
+                                            <font>
+                                                <Font name="Gill Sans Light" size="30.0"/>
+                                            </font>
+                                        </Text>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="364.0" prefWidth="745.0">
+                                    <children>
+                                        <BarChart fx:id="scoreGraph" legendVisible="false" prefHeight="345.0"
+                                                  prefWidth="573.0" stylesheets="@../../resources/BarChart.css">
+                                            <xAxis>
+                                                <CategoryAxis side="BOTTOM"/>
+                                            </xAxis>
+                                            <yAxis>
+                                                <NumberAxis side="LEFT"/>
+                                            </yAxis>
+                                        </BarChart>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Your score is: ">
+                                            <font>
+                                                <Font name="Gill Sans Light" size="25.0"/>
+                                            </font>
+                                        </Text>
+                                        <Label fx:id="scoreLabel" contentDisplay="CENTER" prefHeight="29.0"
+                                               prefWidth="115.0" text="Label">
+                                            <font>
+                                                <Font name="Gill Sans" size="25.0"/>
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

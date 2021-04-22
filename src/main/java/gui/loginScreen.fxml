@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<StackPane fx:id="parentContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+           prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="gui.LoginController">
+    <children>
+        <AnchorPane fx:id="anchorRoot" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: #ffffff;">
+            <children>
+                <HBox prefHeight="600.0" prefWidth="900.0">
+                    <children>
+                        <VBox alignment="CENTER" prefHeight="600.0" prefWidth="700.0"
+                              style="-fx-background-color: #98c665;">
+                            <children>
+                                <ImageView fitHeight="131.0" fitWidth="134.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@resource/logo6.png"/>
+                                    </image>
+                                </ImageView>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="GoGreen" textAlignment="CENTER"
+                                      wrappingWidth="300.48193359375">
+                                    <font>
+                                        <Font name="Gill Sans" size="25.0"/>
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets top="10.0"/>
+                                    </VBox.margin>
+                                </Text>
+                            </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="600.0" prefWidth="700.0">
+                            <children>
+                                <Text fill="#98c665" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+                                    <font>
+                                        <Font name="Gill Sans Light" size="30.0"/>
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets top="20.0"/>
+                                    </VBox.margin>
+                                </Text>
+                                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="447.0">
+                                    <children>
+                                        <TextField fx:id="usernameField" prefHeight="51.0" prefWidth="280.0"
+                                                   promptText="username"
+                                                   style="-fx-background-color: transparent; -fx-border-width: 0 0 2px 0; -fx-border-color: #98c665;">
+                                            <font>
+                                                <Font name="Gill Sans Light" size="16.0"/>
+                                            </font>
+                                        </TextField>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="77.0" prefWidth="447.0">
+                                    <children>
+                                        <PasswordField fx:id="passwordField" prefHeight="45.0" prefWidth="280.0"
+                                                       promptText="password"
+                                                       style="-fx-background-color: transparent; -fx-border-width: 0 0 2px 0; -fx-border-color: #98c665;">
+                                            <font>
+                                                <Font name="Gill Sans Light" size="16.0"/>
+                                            </font>
+                                        </PasswordField>
+                                    </children>
+                                </HBox>
+                                <Label text="Wrong username or password" textFill="RED" visible="false">
+                                    <font>
+                                        <Font name="Gill Sans Light" size="13.0"/>
+                                    </font>
+                                </Label>
+                                <HBox alignment="CENTER" prefHeight="31.0" prefWidth="447.0">
+                                    <VBox.margin>
+                                        <Insets top="20.0"/>
+                                    </VBox.margin>
+                                    <children>
+                                        <Button fx:id="loginButton" mnemonicParsing="false"
+                                                onAction="#loadWelcomeScreen" prefHeight="42.0" prefWidth="81.0"
+                                                stylesheets="@/buttons.css"
+                                                text="LOGIN">
+                                            <font>
+                                                <Font name="Gill Sans Light" size="13.0"/>
+                                            </font>
+                                        </Button>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="28.0" prefWidth="299.0">
+                                    <VBox.margin>
+                                        <Insets top="20.0"/>
+                                    </VBox.margin>
+                                    <children>
+                                        <Text fill="#98c665" strokeType="OUTSIDE" strokeWidth="0.0" text="Or"
+                                              textAlignment="CENTER" wrappingWidth="27.98046875">
+                                            <font>
+                                                <Font name="Gill Sans Light" size="13.0"/>
+                                            </font>
+                                        </Text>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="53.0" prefWidth="447.0">
+                                    <VBox.margin>
+                                        <Insets/>
+                                    </VBox.margin>
+                                    <children>
+                                        <Button fx:id="registerButtonLogin" mnemonicParsing="false"
+                                                onAction="#loadRegisterScreen" prefHeight="33.0" prefWidth="82.0"
+                                                stylesheets="@/buttons.css"
+                                                text="REGISTER" textAlignment="CENTER">
+                                            <HBox.margin>
+                                                <Insets top="20.0"/>
+                                            </HBox.margin>
+                                            <font>
+                                                <Font name="Gill Sans Light" size="13.0"/>
+                                            </font>
+                                        </Button>
+                                    </children>
+                                </HBox>
+
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </AnchorPane>
+
+    </children>
+
+</StackPane>

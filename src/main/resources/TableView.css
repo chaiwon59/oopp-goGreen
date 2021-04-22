@@ -1,0 +1,40 @@
+.table-view {
+
+    -fx-background-color: transparent;
+    -fx-font-family: "Gill Sans";
+
+}
+
+.table-view .column-header,
+.table-view .column-header .filler,
+.table-view .column-header-background .filler,
+.table-view .column-header-background .label {
+
+    -fx-background-color: #98c665;
+    -fx-font-family: "Gill Sans";
+    -fx-text-fill: white;
+
+}
+
+.table-view:focused {
+
+    -fx-background-color: transparent;
+
+}
+
+.table-row-cell: even {
+
+    -fx-background-color: #eaf3e0;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+
+}
+
+.table-row-cell: odd  {
+
+    -fx-background-color: #c1dca2;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+
+}
+

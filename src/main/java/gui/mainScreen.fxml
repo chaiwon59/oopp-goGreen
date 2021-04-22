@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="parentContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainController">
+    <children>
+        <AnchorPane fx:id="anchorRoot" prefHeight="300.0" prefWidth="300.0">
+            <children>
+                <HBox prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #ffffff;">
+                    <children>
+                        <VBox alignment="CENTER" prefHeight="600.0" prefWidth="251.0" style="-fx-background-color: #98c665;">
+                            <children>
+                                <VBox alignment="TOP_CENTER" prefHeight="195.0" prefWidth="94.0">
+                                    <children>
+                                        <Button fx:id="userButtonMain" mnemonicParsing="false" onAction="#loadProfileScreen" prefHeight="36.0" prefWidth="141.0" style="-fx-background-color: #98c665;" text="USER">
+
+                                            <graphic>
+                                                <ImageView fitHeight="37.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@resource/user.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                            <font>
+                                                <Font name="Gill Sans Light" size="16.0" />
+                                            </font>
+                                        </Button>
+                                        <HBox alignment="CENTER" prefHeight="63.0" prefWidth="94.0">
+                                            <children>
+                                                <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#logout" prefHeight="45.0" prefWidth="136.0" style="-fx-background-color: transparent;" text="LOGOUT">
+                                                    <graphic>
+                                                        <ImageView fitHeight="33.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@resource/logout_symbol.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                    </graphic>
+                                                    <font>
+                                                        <Font name="Gill Sans Light" size="16.0" />
+                                                    </font>
+                                                </Button>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                                <VBox alignment="CENTER" prefHeight="141.0" prefWidth="94.0">
+                                    <children>
+                                        <ImageView fitHeight="126.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@resource/logo6.png" />
+                                            </image>
+                                        </ImageView>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="GoGreen">
+                                            <font>
+                                                <Font name="Gill Sans" size="20.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets top="5.0" />
+                                            </VBox.margin>
+                                        </Text>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </VBox>
+                        <VBox prefHeight="600.0" prefWidth="806.0">
+                            <children>
+                                <HBox alignment="TOP_RIGHT" prefHeight="45.0" prefWidth="345.0">
+                                    <children>
+                                        <Button fx:id="mainBackButton" mnemonicParsing="false" onAction="#loadWelcomeScreen" prefHeight="35.0" prefWidth="34.0" style="-fx-background-color: transparent;">
+                                            <graphic>
+                                                <ImageView fitHeight="42.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@resource/back_button.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="276.0" prefWidth="728.0">
+                                    <children>
+                                        <Button fx:id="foodButtonMain" mnemonicParsing="false" onAction="#loadFoodScreen" onMouseEntered="#serCursor" style="-fx-background-color: transparent;">
+                                            <graphic>
+                                                <ImageView fitHeight="198.0" fitWidth="199.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@resource/Food_main.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="0.0" prefWidth="507.0">
+                                    <children>
+                                        <HBox alignment="CENTER" prefHeight="177.0" prefWidth="438.0">
+                                            <children>
+                                                <Button fx:id="transportationButtonMain" mnemonicParsing="false" onAction="#loadTransportationScreen" onMouseEntered="#serCursor3" prefHeight="165.0" prefWidth="186.0" style="-fx-background-color: transparent;">
+                                                    <graphic>
+                                                        <ImageView fx:id="transportation_main" fitHeight="205.0" fitWidth="212.0" pickOnBounds="true" preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@resource/trasportation_main.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                    </graphic>
+                                                </Button>
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER" prefHeight="215.0" prefWidth="428.0">
+                                            <children>
+                                                <Button fx:id="energyButtonMain" mnemonicParsing="false" onAction="#loadEnergyScreen" onMouseEntered="#serCursor2" style="-fx-background-color: transparent;">
+                                                    <graphic>
+                                                        <ImageView fitHeight="190.0" fitWidth="184.0" pickOnBounds="true" preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@resource/Energy_main.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                    </graphic>
+                                                </Button>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>
